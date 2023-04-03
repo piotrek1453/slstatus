@@ -65,10 +65,14 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ datetime, "[ %s] ",           "%a %d %b %T" },
-  { netspeed_rx, "[ %sB/s] ", "eno1"},
-  { netspeed_tx, "[ %sB/s] ", "eno1"},
-  { run_command, "[ %s%%] ", "pamixer --get-volume"},
-  { cpu_perc, "[ %s%%] ", NULL},
-  { ram_perc, "[ %s%%] ", NULL}
+  //top bar
+	{ datetime, " %s ",           "%a %d %b %T" },
+  { netspeed_rx, " %sB/s ", "eno1"},
+  { netspeed_tx, " %sB/s ", "eno1"},
+  { cpu_perc, " %s%% ", NULL},
+  { ram_perc, " %s%% ", NULL},
+  { disk_perc, " %s%%; ", "/"},
+  //bottom bar 
+  { ipv4, " %s ", "eno1"},
+  { run_command, " %s%% ", "pamixer --get-volume"}
 };
