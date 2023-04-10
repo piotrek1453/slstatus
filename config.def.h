@@ -70,9 +70,15 @@ static const struct arg args[] = {
   { netspeed_tx, " %sB/s ", "eno1"},
   { cpu_perc, " %s%% ", NULL},
   { ram_perc, " %s%% ", NULL},
-  { disk_perc, " %s%%; ", "/"},
+  { disk_perc, " %s%% ", "/"},
+  { disk_free, "%s/", "/"},
+  { disk_total, "%s;", "/"},
   //bottom bar 
-  { ipv4, " %s ", "eno1"},
-  { run_command, " %s%% ", "pamixer --get-volume"},
-	{ datetime, " %s ",           "%a %d %b %T" }
+//  { run_command, "%s ", "/home/juchap/scripts/wttr"},
+  { cat, "%s;", "/home/juchap/.slstatus/.wttr.txt"},
+  { cat, " %s ", "/home/juchap/.slstatus/.ip.txt"},
+  { ipv4, "󰈀 %s ", "eno1"},
+//  { run_command, " %s ", "/home/juchap/scripts/globIP"},
+ // { run_command, " %s%% ", "pamixer --get-volume"},
+	{ datetime, " %s ",           "%a %d %b %G %T"}
 };
