@@ -66,8 +66,10 @@ static const char unknown_str[] = "n/a";
 static const struct arg args[] = {
 	/* function format          argument */
   //top bar
-  { netspeed_rx, "  %sB/s ", "eno1"},
-  { netspeed_tx, "  %sB/s ", "eno1"},
+  { battery_perc, "  %s%%/", "BAT0"},
+  { battery_perc, "%s%% ", "BAT1"},
+  { netspeed_rx, "  %sB/s ", "wlp3s0"},
+  { netspeed_tx, "  %sB/s ", "wlp3s0"},
   { cpu_perc, "  %s%% ", NULL},
   { ram_perc, "  %s%% ", NULL},
   { disk_perc, " 󰋊 %s%% ", "/"},
@@ -76,8 +78,9 @@ static const struct arg args[] = {
   //bottom bar 
 //  { run_command, "%s ", "/home/juchap/scripts/wttr"},
   { cat, " %s ;", "/home/juchap/.slstatus/.wttr.txt"},
+  { wifi_essid, "  %s ", "wlp3s0"},
   { cat, "  %s ", "/home/juchap/.slstatus/.ip.txt"},
-  { ipv4, " 󰈀 %s ", "eno1"},
+  { ipv4, " 󰈀 %s ", "wlp3s0"},
 //  { run_command, " %s ", "/home/juchap/scripts/globIP"},
   { run_command, " %s%% ", "pamixer --get-volume"},
 	{ datetime, "  %s ",           "%a %d %b %G %T"}
