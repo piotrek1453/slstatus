@@ -77,10 +77,10 @@ static const struct arg args[] = {
   { disk_total, " %s ;", "/"},
   //bottom bar 
 //  { run_command, "%s ", "/home/juchap/scripts/wttr"},
-  { cat, " %s ;", "/home/juchap/.slstatus/.wttr.txt"},
+//  { cat, " %s ;", "/home/juchap/.slstatus/.wttr.txt"},
   { wifi_essid, "  %s ", "wlp3s0"},
   { cat, "  %s ", "/home/juchap/.slstatus/.ip.txt"},
-  { ipv4, " 󰈀 %s ", "wlp3s0"},
+  { ipv4, " 󰈀 %s ;", "wlp3s0"},
 //  { run_command, " %s ", "/home/juchap/scripts/globIP"},
   { run_command, " %s%% ", "pamixer --get-volume"},
 	{ datetime, "  %s ",           "%a %d %b %G %T"}
