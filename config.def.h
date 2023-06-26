@@ -70,11 +70,12 @@ static const struct arg args[] = {
   { battery_perc, "%s%% ", "BAT1"},
   { netspeed_rx, "  %sB/s ", "wlp3s0"},
   { netspeed_tx, "  %sB/s ", "wlp3s0"},
+  { temp, "  %s°C ", "/sys/class/thermal/thermal_zone0/temp"},
   { cpu_perc, "  %s%% ", NULL},
   { ram_perc, "  %s%% ", NULL},
   { disk_perc, " 󰋊 %s%% ", "/"},
   { disk_free, " %s/", "/"},
-  { disk_total, " %s ;", "/"},
+  { disk_total, "%s ;", "/"},
   //bottom bar 
 //  { run_command, "%s ", "/home/juchap/scripts/wttr"},
 //  { cat, " %s ;", "/home/juchap/.slstatus/.wttr.txt"},
